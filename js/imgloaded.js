@@ -59,17 +59,17 @@
 
   const ldconfig = {
     light: {
-	  smallSrc: 'https://pan.imgbed.link/file/185215', //浅色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: 'https://pan.imgbed.link/file/185209', //浅色模式 大图链接 最终显示的图片
-	  mobileSmallSrc: 'https://pan.imgbed.link/file/185216', //手机端浅色小图链接 尽可能配置小于100k的图片
-	  mobileLargeSrc: 'https://pan.imgbed.link/file/185210', //手机端浅色大图链接 最终显示的图片
+	  smallSrc: 'https://pan.imgbed.link/file/185537', //浅色模式 小图链接 尽可能配置小于100k的图片 
+	  largeSrc: 'https://pan.imgbed.link/file/185538', //浅色模式 大图链接 最终显示的图片
+	  mobileSmallSrc: 'https://pan.imgbed.link/file/185536', //手机端浅色小图链接 尽可能配置小于100k的图片
+	  mobileLargeSrc: 'https://pan.imgbed.link/file/185539', //手机端浅色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
 	  },
 	dark: {
-	  smallSrc: 'https://pan.imgbed.link/file/185215', //深色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: 'https://pan.imgbed.link/file/185209', //深色模式 大图链接 最终显示的图片
-	  mobileSmallSrc: 'https://pan.imgbed.link/file/185216', //手机端深色模式小图链接 尽可能配置小于100k的图片
-	  mobileLargeSrc: 'https://pan.imgbed.link/file/185210', //手机端深色大图链接 最终显示的图片
+	  smallSrc: 'https://pan.imgbed.link/file/185537', //深色模式 小图链接 尽可能配置小于100k的图片 
+	  largeSrc: 'https://pan.imgbed.link/file/185538', //深色模式 大图链接 最终显示的图片
+	  mobileSmallSrc: 'https://pan.imgbed.link/file/185536', //手机端深色模式小图链接 尽可能配置小于100k的图片
+	  mobileLargeSrc: 'https://pan.imgbed.link/file/185539', //手机端深色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
 	  },
 	};
