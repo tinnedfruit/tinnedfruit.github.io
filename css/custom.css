@@ -1,0 +1,159 @@
+:root {
+    --trans-light: rgba(255, 255, 255, 0.78);
+    --trans-dark: rgba(25, 25, 25, 0.78);
+    --border-style: 1px solid rgb(169, 169, 169);
+    --backdrop-filter: blur(5px) saturate(150%);
+  }
+  
+  /* 首页文章卡片 */
+  #recent-posts > .recent-post-item {
+    background: var(--trans-light);
+    --backdrop-filter: var(--backdrop-filter);
+    border-radius: 25px;
+    border: var(--border-style);
+  }
+  
+  /* 首页侧栏卡片 */
+  #aside-content .card-widget {
+    background: var(--trans-light);
+    --backdrop-filter: var(--backdrop-filter);
+    border-radius: 18px;
+    border: var(--border-style);
+  }
+  
+  /* 文章页、归档页、普通页面 */
+  div#post,
+  div#page,
+  div#archive {
+    background: var(--trans-light);
+    --backdrop-filter: var(--backdrop-filter);
+    border: var(--border-style);
+    border-radius: 20px;
+  }
+  
+  /* 导航栏 */
+  #page-header.nav-fixed #nav {
+    background: rgba(255, 255, 255, 0.75);
+    --backdrop-filter: var(--backdrop-filter);
+  }
+  
+  [data-theme="dark"] #page-header.nav-fixed #nav {
+    background: rgba(0, 0, 0, 0.7) !important;
+  }
+  
+  /* 夜间模式遮罩 */
+  [data-theme="dark"] #recent-posts > .recent-post-item,
+  [data-theme="dark"] #aside-content .card-widget,
+  [data-theme="dark"] div#post,
+  [data-theme="dark"] div#archive,
+  [data-theme="dark"] div#page {
+    background: var(--trans-dark);
+  }
+  
+  
+  /* 夜间模式页脚页头遮罩透明 */
+  [data-theme="dark"] #footer::before {
+    background: transparent !important;
+  }
+  [data-theme="dark"] #page-header::before {
+    background: transparent !important;
+  }
+  
+  /* 阅读模式 */
+  .read-mode #aside-content .card-widget {
+    background: rgba(158, 204, 171, 0.5) !important;
+  }
+  .read-mode div#post {
+    background: rgba(158, 204, 171, 0.5) !important;
+  }
+  
+  /* 夜间模式下的阅读模式 */
+  [data-theme="dark"] .read-mode #aside-content .card-widget {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+  }
+  [data-theme="dark"] .read-mode div#post {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+  }
+
+  /* 侧边栏个人信息卡片动态渐变色 */
+  #aside-content > .card-widget.card-info {
+    /* 设置背景为线性渐变 */
+    background: linear-gradient(
+      -45deg, /* 渐变的角度为-45度 */
+      #e8d8b9, /* 渐变的起始颜色 */
+      #eccec5, /* 渐变的第二个颜色 */
+      #a3e9eb, /* 渐变的第三个颜色 */
+      #bdbdf0, /* 渐变的第四个颜色 */
+      #eec1ea  /* 渐变的结束颜色 */
+    );
+    /* 盒子阴影，x轴偏移0，y轴偏移0，模糊半径5px，阴影颜色 */
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    /* 设置定位方式为相对定位 */
+    position: relative;
+    /* 设置背景尺寸，以百分比表示的宽度和高度 */
+    background-size: 400% 400%;
+    /* 使用-webkit-前缀定义渐变动画，持续时间10秒，缓动函数ease，循环播放 */
+    -webkit-animation: Gradient 10s ease infinite;
+    /* 使用-moz-前缀定义渐变动画 */
+    -moz-animation: Gradient 10s ease infinite;
+    /* 定义标准的渐变动画 */
+    animation: Gradient 10s ease infinite !important;
+  }
+
+  /* 定义webkit浏览器的动画关键帧 */
+  @-webkit-keyframes Gradient {
+    0% {
+      /* 初始时背景位置 */
+      background-position: 0% 50%;
+    }
+    50% {
+      /* 中间时背景位置 */
+      background-position: 100% 50%;
+    }
+    100% {
+      /* 结束时背景恢复到起始位置 */
+      background-position: 0% 50%;
+    }
+  }
+
+  /* 定义moz浏览器的动画关键帧 */
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* 定义标准的动画关键帧 */
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* 黑夜模式适配 */
+  [data-theme="dark"] #aside-content > .card-widget.card-info {
+    /* 在黑夜模式下背景颜色 */
+    background: #191919ee;
+  }
+  
+  /* 个人信息Follow me按钮样式 */
+  #aside-content > .card-widget.card-info > #card-info-btn {
+    /* 按钮背景颜色 */
+    background-color: #3eb8be;
+    /* 按钮边角圆角半径 */
+    border-radius: 8px;
+  }
