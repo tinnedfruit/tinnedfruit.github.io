@@ -67,7 +67,7 @@
 	  },
 	dark: {
 	  smallSrc: 'https://pan.imgbed.link/file/186737', //深色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: 'https://pan.imgbed.link/file/186741', //深色模式 大图链接 最终显示的图片
+	  largeSrc: 'https://pan.imgbed.link/file/189090', //深色模式 大图链接 最终显示的图片
 	  mobileSmallSrc: 'https://pan.imgbed.link/file/186739', //手机端深色模式小图链接 尽可能配置小于100k的图片
 	  mobileLargeSrc: 'https://pan.imgbed.link/file/186740', //手机端深色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
