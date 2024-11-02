@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>3d打印切片技巧 | 画船听雨眠</title><meta name="author" content="tinnedfruit"><meta name="copyright" content="tinnedfruit"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="3d打印切片技巧"><meta name="application-name" content="3d打印切片技巧"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="3d打印切片技巧"><meta property="og:url" content="http://blog.tinnedfruit.top/2024/11/02/3dModeling1/index.html"><meta property="og:site_name" content="画船听雨眠"><meta property="og:description" content="3d打印切片技巧3D打印初学者必读，切片软件的八大要素  正确的设置3D切片软件，可以极大的提升3D打印的成功率。这就是为什么必须了解切片软件的工作原理以及每个设置，它们将影响模型的最终成型。 对专业用户而言，对3D打印切片软件进行正确的设置，将有效提升3D打印机打印模型的成功率。但在某些时刻，专业"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://pan.imgbed.link/file/186742"><meta property="article:author" content="tinnedfruit"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://pan.imgbed.link/file/186742"><meta name="description" content="3d打印切片技巧3D打印初学者必读，切片软件的八大要素  正确的设置3D切片软件，可以极大的提升3D打印的成功率。这就是为什么必须了解切片软件的工作原理以及每个设置，它们将影响模型的最终成型。 对专业用户而言，对3D打印切片软件进行正确的设置，将有效提升3D打印机打印模型的成功率。但在某些时刻，专业"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://blog.tinnedfruit.top/2024/11/02/3dModeling1/"><link rel="preconnect" href="//cdn.cbd.int"><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//static.cloudflareinsights.com"><link rel="preconnect" href="//www.clarity.ms"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="google-site-verification" content="xxx"><meta name="baidu-site-verification" content="code-xxx"><meta name="msvalidate.01" content="xxx"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?313b4bf755f2851faaaefdf6182c9a6e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-548WJ90VZV"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-548WJ90VZV');
+</script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;1b7a82ad236b46dca4b2aad38753f735&quot;}"></script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "oi0rjaxv16");</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"tinnedfruit","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"8TSTZomZOo1","Referer":"https://blog.tinnedfruit.top/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3JzTCMZqBflOebeW","LingQueMonitorID":"3K6V9ILzMf4A0UqG"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":null},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: {"appId":"IHN6VHAL4A","apiKey":"b3a02667e5be8739ff5535c3f277fdb0","indexName":"hexo","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: tinnedfruit","link":"链接: ","source":"来源: 画船听雨眠","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '画船听雨眠',
+  title: '3d打印切片技巧',
+  postAI: 'true',
+  pageFillDescription: '3d打印切片技巧, 什么是3D切片软件？它能做什么？, 3D打印中切片常用的几个参数功能解析, 一、表面质量, 温度, 三、速度, 四、支撑, 五、平台粘附打印切片技巧打印初学者必读切片软件的八大要素正确的设置切片软件可以极大的提升打印的成功率这就是为什么必须了解切片软件的工作原理以及每个设置它们将影响模型的最终成型对专业用户而言对打印切片软件进行正确的设置将有效提升打印机打印模型的成功率但在某些时刻专业用户也会因为没有正确设置切片软件导致打印失败那么切片软件中的内容该如何设置了其实对于初学者而言最大的问题就是面对各种耗材以及设计却无法正确的设置打印机最终造成打印成品与自己所想象的产品之间有较大的差距那么作为初学者该如何正确设置切片软件了要解决这个问题就得先了解切片软件的基本功能并了解这些功能是如何影响打印下面就是一些详细的介绍什么是切片软件它能做什么切片软件是一种软件它可以将数字模型转换为打印机可识别的打印代码从而让打印机开始执行打印命令具体的工作流程是切片软件可以根据您选择的设置将等格式的模型进行水平切割从而得到一个个的平面图并计算打印机需要消耗多少耗材及时间而后将这些信息统一存入文件中并发到用户的打印机中八大事项一一解析知道了切片软件的工作原理与流程就得一一了解能影响到它们的设置层高层高可以被视为打印中的分辨率此设置是指定每层耗材的高度如果每一层的高度很低那么将会打印出表面平滑的成品但这也有一个缺点将消耗更多的时间如果您把层高数值调的较大那么较厚的图层将会形成粗糙的表面从而使层次感提到提升这种做法有利于提升打印速度而这种设置比较适用于无需细节的模型如果您想打印具有细节的模型那么建议采用较薄层高较低的数值的高度打印外壳厚度外壳指的是在开始打印中空部分之前打印机根据设置所打印的外墙次数该设定是调整外墙厚度从而成为影响成品强度最大之一通过增加数量打印机将可以打印出更厚更结实的外墙抽丝此功能主要是打印机需要越过中空部分时将耗材回拉并停止挤出耗材的过程如果您在打印过程中始终开启此功能那么将有可能导致耗材在喷嘴中堵塞这时则需要对该功能进行关闭填充密度填充是指模型外壳内的空间密度该功能通常用做单位如果您设置的是填充那么该模型内部将被完全填充填充的比例越高物体的强度重量也会一同增加同时带来的是长时间打印和更多的耗材损耗通常情况下填充密度是在如果您需要更坚固的产品也可以选择以上的填充密度打印速度打印速度是指挤出机在挤出耗材并行进时的速度最佳设置就是在挤出机和移动速度中寻找最佳平衡点这里设计耗材层数温度等多个原因如果单一的最求速度会导致最终模型出现垂丝等杂乱的现象而较慢的速度可以为您提供高质量的打印效果一般推荐速度是而在打印过程中也可以根据您的要求随时改变支撑当打印的模型超过角时打印机挤出的耗材将无法正常平铺在原有层面中如果长时间进行超过的打印度数将会导致模型外表粗糙垂丝等现象而通过添加支撑的方式可以为最终模型创造一个没有下垂的高质量环境常见的支撑类型有树状网格等多个形状用户可以根据自己的需求进行选择首层粘连部分用户在进行打印时会发现第一层打印无法有效的贴在平台上这种情况通常是由于平台的附着力不够引起在切片软件中您可以通过两个设置来增加耗材对平台的附着力在物体低面周围增加环绕一层对减少底面边角的卷曲变形有较大的帮助在打印后也比较容易去除底板支架在物体下打印单独的一层支架如果打印特别小的物体或者底面不平时支架会改进物体底面结合但打印后移除支架会影响底面打印质量初始层厚度初始层是指打印机在平台上打印的第一层厚度如果您想给模型一个更坚固的打印底座可以增加初始层的厚度通常切片软件中默认的厚度在这个数值可以较为快速的构建坚固的底座并且会很稳定的贴在平台上打印中切片常用的几个参数功能解析经常有老伙计们会问该如何调整参数来提高打印效果呢事实上大多都并没有完美的固定参数那到底又该如何针对不同模型设置参数呢这次我们就针对于这个点好好解析一下授人以鱼不如授人以渔把各个参数的实际效果说明了相信看过后就能够自主地运用这些参数让打印出来的模型更加完美一表面质量层高对于模型来说最直接影响其表面打印效果的便是层高层高参数为之间越小则越精细同时打印时间也成倍增加层高打印时间是的倍打印时长那么如何在精细度和时长上做较好的选择呢首先就是对于模型的表面效果要求如果对模型表面效果要求高则选小层高反之同样道理其次便是细节假如模型细微的细节非常丰富并且希望呈现出来则要设置较小的层高最后则是水平面的弧度是否较多弧度是否较大对于水平面的弧度塑造尤其是水平面弧度较为平缓时较大的层高会产生比较明显的阶梯和层纹对于这种情况要么设置小层高要么则改变摆放角度后者我们会另开文章详细说明壁厚与底顶厚度因为水平的线宽为因此壁的数量是壁厚除以的整数数字如则有层壁仍为层同理底顶厚度则和层高有关其中最外层为外壁其余层是内壁如下图所示在打印细节时显示红色的外壁来负责还原细节显示绿色的内壁则负责形成壳体结构非必要情况下只需要选择或者即可单层壁厚降低模型的壳体强度同时会导致斜面等处出现填充线影响模型表面效果壁厚过厚则会拉长打印时间及耗材消耗左侧为的壁厚右侧为的壁厚填充填充的主要功能是作为结构支撑当填充过小时或者甚至没有填充时模型越大在打印壳体时越容易翻车打成一团丝但同时填充过高达到甚至时因为耗材的冷缩性会导致模型的大表面内凹这种情况在使用等收缩率大的材料时尤为明显另外需要注意的一点是中的填充密度是绝对密度即哪怕模型再放大或缩小其网格的大小网格线距是不变的这点给我们的启示是假若打印一个较小的模型希望有较好的强度时要设置较大值的填充密度打印大模型时也可不必因担心模型强度不够而提高密度上面两种图都使用了填充在模型比例不同时网格是相同大小的温度打印温度即喷头加热的温度在购买耗材时可在耗材上看到所推荐的温度区间根据推荐设置喷头温度高纯度的的推荐温度是特种一般都会比普通要求温度高因为添加物一般都比熔点高而对于受潮旧置杂质多的耗材则需要稍许提高温度是一种非结晶塑料是一种结晶塑料即在不断加热时会受热区域总体软化再变成流动态而则会如冰块一样受热区域外层会先融化成流动态接着内层不断融化也就意味着在温度不足时仍可非足量地挤出而则会出现不出料的情况而持续这种情况时液体可能倒灌渗出导致堵头或者外部漏料因此需要在打印前观察出料情况选择好温度超过度会开始产生气泡温度越高这个现象越容易发生塑料的温度形变曲线类似于类似于平台温度由上面曲线可看到在低温加热时会处于玻璃态弹性加热能让紧贴平台达到稳固效果当达到度上下时打印模型的延边底垫等都会具有很高的玻璃态弹性即柔性因此会使模型稳定性下降推荐温度为度区间平台的温度来源于平台下方内侧的加热块热源以及导热性好的铝基板导热因此平台中心的实际加热温度会低于显示温度在外部环境较冷的情况下需要提高平台温度以上则是表层质量以及温度的相关参数详解理解其背后的原理及表现能够帮助我们更好地去调整在下篇中将会对速度支撑平台粘附等进行解析三速度打印速度打印速度是所有喷头移动动作的速度在切片软件中当其他速度为时默认遵循打印速度的设置而当其他速度如填充速度进行了设置后则会按照填充速度的设置来运行基于方便用户可直接上手操作在安装后速度参数便已按照测试较好的设置这也就意味着如果只是单纯地调整打印速度只会对总体的打印速度和打印时长产生较小影响如果希望缩短打印时长则需要对支撑内外壁填充空走等速度进行调整填充速度填充速度即打印填充时喷头移动的速度须知填充不仅仅是网格线如图包括在壁层之间曲面变化处的排线线条也是填充因此填充速度设置过快时可能打印曲面打印效果变糟糕建议控制在以下内外壁顶底速度内外壁的打印速度和顶部顶部打印速度对模型表面成型效果有不小的影响打印是将线材挤压在完全冷却后的材料的上层挤压后的线材数秒内便会冷却成型而当移动速度过快时就会出现喷头拖动挤出的耗材因此会导致模型表面出现多孔疏松的瑕疵空走速度当喷头未挤出耗材时移动时即为空走高速的空走会对模型打印效果产生影响的因素主要有点空走时会拉扯出细丝拉丝情况细丝假若挂在模型上或者横贯出模型外表面则会影响后续的打印产生缝隙对于上述点是可以解决的第一点可通过回抽设置来第二点可通过设置中开启梳理模式来避免极光尔沃切片软件是自动开启这个功能的因此只需要根据打印的真实拉丝情况设置好回抽便可把空走速度提高到的较高水平另外由于喷头组件较重因此惯性较大当空走速度过高时瞬时加速及减速很大会产生很大的惯性容易导致丢步因此要么不要使用过高的空走速度要么则开启加速控制减少加速度四支撑支撑是大多数模型无法避免的但会对模型打印效果产生不良影响的因素最直观地预先了解支撑影响范围就是看软件上模型底部的红色区域据此来做调整支撑设置合理与否是切片技巧高低的分水岭支撑角度支撑角度即指模型各区域和水平面夹角的角度小于等于这个角度的区域都会产生支撑角度并不是越大越好虽然这样的确会较少支撑范围但同样意味着模型打坏的风险会提高支撑设置的合理区间为至于该如何设置较佳的角度则需要看模型表面过渡平缓度如表面过渡平缓如球体在甚至设置都可成功过渡平缓意味哪怕是小角度的模型范围它下方是有模型体积在做支撑的大多数模型表面过渡大如突出或凹陷的细节结构则需要设置更大的角度可进一步地在切片后在打印层视图模式下逐层查看实时打印效果如出现成型丝线悬空较多则需要增加角度如图中所示由于层厚为层跨度大因此更容易出现这种成型丝线悬空情况此时则需要增加支撑角度若不修改此处会产生丝线脱出除去后留有坑洞的瑕疵支撑样式极光尔沃切片软件中共有六种支撑样式从实际使用效果来看只有折线和网格较为实用线支撑不够牢固非常容易变形回环三角形支撑内部间隙较大容易有支撑顶部及支撑处模型脱离的风险回环有多方面的缺陷折线和网格相比前者间隙较大但也意味着和模型接触少对模型表面影响小同时前者也更加容易拆除由于软件的支撑会在接触模型前按照接触面形状变化如下图因此间隙问题实际上没多大影响除了在模型表面十分多复杂结构外一般情况推荐使用折线支撑密度支撑密度即支撑样式的密度密度越小支撑间的缝隙越大支撑强度越低也更容易拆取一般密度以上的支撑就能获得足够的支撑强度以上就完全不必要了密度变大耗材使用也变多那如何在低密度的情况下保证支撑表面能够完好打印出来呢除了上面所讲的极光尔沃切片软件自带的支撑顶部随模型变化的功能外还可以通过手动设置支撑接触面来在支撑顶部制造额外的样式通过设置密度更高的网格支撑来保证模型表面效果需要额外注意当支撑很高时低密度的折线会受喷头带动的力产生晃动导致支撑处模型打散或者整个模型打废因此在这类情况中要么增加密度要么则使用结构更加稳固的网格支撑如图示支撑接触面相当于把支撑顶部替换成可设置样式支撑距离如果支撑太难拆取则需要设置个参数支撑顶部的距离支撑底部的距离这两个距离即支撑顶部与底部和模型之间的间隙推荐设置范围是极光尔沃切片软件以及软件的默认参数为可设置为支撑会更容易拆除且对模型表面的效果影响较少对于支撑接触模型表面要求较高的可设置至但是这个数值只适用于较为平缓的支撑接触区域因为假设层高的情况下已经足足产生了一层半的间隙会使较小的模型细节下落导致细节处模型打散模型底部展示的支撑顶部距离下黄框所示范围因受力较大因此仍然会在模型上产生支撑痕迹红框所示范围因受力较小则基本看不到支撑痕迹五平台粘附粘附类型粘附类型有种外圈其主要功能是把存在于喷头内部的耗材消耗点避免因为内部残留的变脆不同色的耗材影响模型效果檐边底垫则是为了扩大模型和平台的接触面积降低模型脱离平台过高模型顶部晃动的风险此外底垫还可对调平效果做补偿使模型能在底垫上以更水平的基底上打印同时也避免了因为模型和打印平台直接接触导致取模型时铲刀对模型的损失不过由于软件在底垫功能上存在未修复需要额外设置底垫间隙至檐边宽度底垫外扩距离喷头是把耗材挤压成型的这意味着喷头会对已成型模型产生压力尤其是对于竖直的较高且细的模型顶部的模型容易被喷头的力带动晃动情况下打印就会出现下图中的糟糕效果对于这类情况首先需要提高支撑密度或使用更牢固的支撑样式其次则需要增大模型和平台的接触面积使模型站得更稳使用檐边或底垫后再分别增加檐边宽度或底垫外扩距离来增大和平台的接触面积切片是一门技术但这个技术并不是令人望而生畏需要的只是多用心多思考多疑问多探寻希望认真看完文章的你能够有所收获能够体验到打印给工作生活带来的乐趣和便捷',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-02 22:44:56',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/home.css"><link rel="stylesheet" href="/css/welcome.css?1"><link rel="stylesheet" href="/css/imgloaded.css?1"><link rel="stylesheet" href="/css/todolist.css"><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://pan.imgbed.link/file/185733"><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.tinnedfruit.top/" title="罆頭的博客"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="罆頭的博客"><span class="back-menu-item-text">罆頭的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">画船听雨眠</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/charts/"><i class="anzhiyufont anzhiyu-icon-chart-line faa-tada" style="font-size: 0.9em;"></i><span> 文章统计</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-instagram faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/games/"><i class="anzhiyufont anzhiyu-icon-rocket faa-tada" style="font-size: 0.9em;"></i><span> 游戏世界</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 想做的事</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://pan.imgbed.link/file/185637" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://pan.imgbed.link/file/185637"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pan.imgbed.link/file/185638" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://pan.imgbed.link/file/185638"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/PVE/" style="font-size: 1.05rem;">PVE<sup>3</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 1.05rem;">Tag Plugins<sup>1</sup></a><a href="/tags/klipper/" style="font-size: 1.05rem;">klipper<sup>1</sup></a><a href="/tags/voron/" style="font-size: 1.05rem;">voron<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9/" style="font-size: 1.05rem;">主题魔改<sup>3</sup></a></div></div><hr></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">3d打印切片技巧</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-11-02T14:45:24.541Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-11-02T14:44:56.000Z" title="更新于 2024-11-02 22:44:56">2024-11-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">5.1k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="3d打印切片技巧"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://pan.imgbed.link/file/185675"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><i class="anzhiyufont anzhiyu-icon-circle-dot" title="朗读摘要"></i><div id="ai-tag">Tianli GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己 🙈</div><div class="ai-btn-item">生成本文简介 👋</div><div class="ai-btn-item">推荐相关文章 📖</div><div class="ai-btn-item">前往主页 🏠</div><div class="ai-btn-item" id="go-tianli-blog">前往爱发电购买</div></div><script data-pjax="" src="/js/anzhiyu/ai_abstract.js"></script></div><article class="post-content" id="article-container" itemscope="" itemtype="https://www.3dzyk.cn/thread-15416-1-1.html"><header><h1 id="CrawlerTitle" itemprop="name headline">3d打印切片技巧</h1><span itemprop="author" itemscope="" itemtype="http://schema.org/Person">tinnedfruit</span><time itemprop="dateCreated datePublished" datetime="2024-11-02T14:45:24.541Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time><time itemprop="dateCreated datePublished" datetime="2024-11-02T14:44:56.000Z" title="更新于 2024-11-02 22:44:56">2024-11-02</time></header><div id="postchat_postcontent"><h1 id="3d打印切片技巧"><a href="#3d打印切片技巧" class="headerlink" title="3d打印切片技巧"></a>3d打印切片技巧</h1><div class="note blue anzhiyufont anzhiyu-icon-bullhorn simple"><p>3D打印初学者必读，切片软件的八大要素</p>
+</div>
+<p>正确的设置3D切片软件，可以极大的提升3D打印的成功率。这就是为什么必须了解切片软件的工作原理以及每个设置，它们将影响模型的最终成型。</p>
+<p>对专业用户而言，对3D打印切片软件进行正确的设置，将有效提升3D打印机打印模型的成功率。但在某些时刻，专业用户也会因为没有正确设置切片软件导致打印失败。那么，切片软件中的内容该如何设置了？</p>
+<p>其实对于初学者而言，最大的问题就是：面对各种耗材以及设计，却无法正确的设置3D打印机，最终造成打印成品与自己所想象的产品之间有较大的差距。那么，作为初学者该如何正确设置切片软件了？</p>
+<p>要解决这个问题，就得先了解切片软件的基本功能，并了解这些功能是如何影响3D打印，下面就是一些详细的介绍。</p>
+<h2 id="什么是3D切片软件？它能做什么？"><a href="#什么是3D切片软件？它能做什么？" class="headerlink" title="什么是3D切片软件？它能做什么？"></a>什么是3D切片软件？它能做什么？</h2><p>切片软件是一种3D软件，它可以将数字3D模型转换为3D打印机可识别的打印代码，从而让3D打印机开始执行打印命令。</p>
+<p>具体的工作流程是：切片软件可以根据您选择的设置将STL等格式的模型进行水平切割，从而得到一个个的平面图，并计算打印机需要消耗多少耗材及时间。而后将这些信息统一存入GCode文件中，并发到用户的3D打印机中。</p>
+<p><strong>八大事项一一解析</strong></p>
+<p>知道了切片软件的工作原理与流程，就得一一了解能影响到它们的设置。</p>
+<ol>
+<li>层高</li>
+</ol>
+<p>层高可以被视为3D打印中的分辨率，此设置是指定每层耗材的高度。如果每一层的高度很低，那么将会打印出表面平滑的成品。但这也有一个缺点：将消耗更多的时间。</p>
+<p>如果您把层高数值调的较大，那么较厚的图层将会形成粗糙的表面，从而使层次感提到提升，这种做法有利于提升打印速度，而这种设置比较适用于无需细节的模型。</p>
+<p>如果您想打印具有细节的模型，那么建议采用较薄（层高较低的数值）的高度打印。</p>
+<ol start="2">
+<li>外壳厚度</li>
+</ol>
+<p>外壳指的是在开始打印中空部分之前，3D打印机根据设置所打印的外墙次数。该设定是调整外墙厚度，从而成为影响成品强度最大之一。通过增加数量，3D打印机将可以打印出更厚、更结实的外墙。</p>
+<ol start="3">
+<li>抽丝</li>
+</ol>
+<p>此功能主要是3D打印机需要越过中空部分时，将耗材回拉并停止挤出耗材的过程。如果您在打印过程中始终开启此功能，那么将有可能导致耗材在喷嘴中堵塞，这时则需要对该功能进行关闭。</p>
+<ol start="4">
+<li>填充密度</li>
+</ol>
+<p>填充是指模型外壳内的空间密度，该功能通常用“%”做单位，如果您设置的是“100%”填充，那么该模型内部将被完全填充。填充的比例越高，物体的强度、重量也会一同增加，同时带来的是长时间打印和更多的耗材损耗。</p>
+<p>通常情况下，填充密度是在10-20%，如果您需要更坚固的产品，也可以选择75%以上的填充密度。</p>
+<ol start="5">
+<li>打印速度</li>
+</ol>
+<p>打印速度是指挤出机在挤出耗材并行进时的速度，最佳设置就是在挤出机和移动速度中寻找最佳平衡点，这里设计耗材、层数、温度等多个原因。如果单一的最求速度，会导致最终模型出现垂丝等杂乱的现象。而较慢的速度可以为您提供高质量的打印效果，一般推荐速度是40-60mm/s。而在打印过程中，也可以根据您的要求随时改变。</p>
+<ol start="6">
+<li>支撑</li>
+</ol>
+<p>当打印的模型超过45°角时，3D打印机挤出的耗材将无法正常平铺在原有层面中，如果长时间进行超过45°的打印度数，将会导致模型外表粗糙、垂丝等现象。而通过添加支撑的方式，可以为最终模型创造一个没有下垂的高质量环境。常见的支撑类型有“树状”、“网格”等多个形状，用户可以根据自己的需求进行选择。</p>
+<ol start="7">
+<li>首层粘连</li>
+</ol>
+<p>部分用户在进行3D打印时，会发现第一层打印无法有效的贴在平台上，这种情况通常是由于平台的附着力不够引起，在切片软件中，您可以通过两个设置来增加耗材对平台的附着力。</p>
+<p>在物体低面周围增加环绕一层，对减少底面边角的卷曲变形有较大的帮助，在打印后也比较容易去除。</p>
+<p>底板支架：在物体下打印单独的一层支架，如果打印特别小的物体，或者底面不平时，支架会改进物体底面结合。但打印后移除支架会影响底面打印质量。</p>
+<ol start="8">
+<li>初始层厚度</li>
+</ol>
+<p>初始层是指3D打印机在平台上打印的第一层厚度。如果您想给模型一个更坚固的打印底座，可以增加初始层的厚度。通常切片软件中默认的厚度在0.3-0.5mm，这个数值可以较为快速的构建坚固的底座，并且会很稳定的贴在平台上</p>
+<h2 id="3D打印中切片常用的几个参数功能解析"><a href="#3D打印中切片常用的几个参数功能解析" class="headerlink" title="3D打印中切片常用的几个参数功能解析"></a>3D打印中切片常用的几个参数功能解析</h2><p>经常有老伙计们会问，该如何调整参数来提高打印效果呢？<br>事实上，大多都并没有完美的固定参数，那到底又该如何针对不同模型设置参数呢？<br>这次，我们就针对于这个点好好解析一下，授人以鱼不如授人以渔，把各个参数的实际效果说明了，相信看过后就能够自主地运用这些参数让打印出来的模型更加完美。</p>
+<h3 id="一、表面质量"><a href="#一、表面质量" class="headerlink" title="一、表面质量"></a>一、表面质量</h3><ol>
+<li>层高<br>对于模型来说，最直接影响其表面打印效果的便是层高。层高参数为0.1mm-0.3mm之间，越小则越精细，同时，打印时间也成倍增加，0.1mm层高打印时间是0.3mm的3倍打印时长。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189093"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189094"><br>那么如何在精细度和时长上做较好的选择呢？<br>首先就是对于模型的表面效果要求，如果对模型表面效果要求高则选小层高，反之同样道理。</li>
+</ol>
+<p>其次便是细节，假如模型细微的细节非常丰富并且希望呈现出来，则要设置较小的层高。</p>
+<p>最后则是水平面的弧度是否较多、弧度是否较大，对于水平面的弧度塑造，尤其是水平面弧度较为平缓时，较大的层高会产生比较明显的阶梯和层纹。对于这种情况要么设置小层高，要么则改变摆放角度。（后者我们会另开文章详细说明）<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189095"><br>2. 壁厚与底顶厚度</p>
+<p>因为水平的线宽为0.4mm，因此壁的数量是壁厚除以0.4的整数数字，如1.2则有3层壁，1.4仍为3层。同理底顶厚度则和层高有关。其中最外层为外壁，其余层是内壁。</p>
+<p>如下图所示，在打印细节时，显示红色的外壁来负责还原细节，显示绿色的内壁则负责形成壳体结构。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189096"><br>非必要情况下只需要选择1.2mm或者0.8mm即可。单层壁厚降低模型的壳体强度，同时会导致斜面等处出现填充线，影响模型表面效果，壁厚过厚则会拉长打印时间及耗材消耗。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189097"><br>左侧为1.2mm的壁厚，右侧为0.4mm的壁厚<br>3. 填充</p>
+<p>填充的主要功能是作为结构支撑，当填充过小时或者甚至没有填充时，模型越大，在打印壳体时越容易“翻车”，打成一团丝。但同时，填充过高，达到80%甚至100%时，因为耗材的冷缩性，会导致模型的大表面内凹，这种情况在使用ABS等收缩率大的材料时尤为明显。</p>
+<p>另外需要注意的一点是，JGcreat中的填充密度是绝对密度，即哪怕模型再放大或缩小，其网格的大小、网格线距是不变的。这点给我们的启示是，假若打印一个较小的模型，希望有较好的强度时，要设置较大值的填充密度。打印大模型时也可不必因担心模型强度不够而提高密度。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189098"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189099"><br>上面两种图都使用了20%填充，在模型比例不同时，网格是相同大小的</p>
+<h3 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h3><ol>
+<li>打印温度</li>
+</ol>
+<p>即喷头加热的温度。在购买耗材时，可在耗材上看到所推荐的温度区间，根据推荐设置喷头温度。高纯度的PLA的推荐温度是200-210，特种PLA一般都会比普通PLA要求温度高，因为添加物一般都比PLA熔点高。而对于受潮、旧置、杂质多的PLA耗材，则需要稍许提高温度。</p>
+<p>ABS是一种非结晶塑料，PLA是一种结晶塑料，即ABS在不断加热时，会受热区域总体软化，再变成流动态。而PLA则会如冰块一样，受热区域外层会先融化成流动态，接着内层不断融化。也就意味着，在温度不足时，ABS仍可非足量地挤出，而PLA则会出现不出料的情况，而持续这种情况时，PLA液体可能倒灌渗出导致堵头或者外部漏料，因此需要在打印前观察出料情况选择好温度。</p>
+<p>PLA超过220度会开始产生气泡，温度越高这个现象越容易发生。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189100"><br>塑料的温度形变曲线，ABS类似于①，PLA类似于②<br>2. 平台温度<br>由上面曲线可看到，PLA在低温加热时会处于玻璃态弹性，加热能让PLA紧贴平台达到稳固效果。当达到70度上下时，打印模型的延边底垫等都会具有很高的玻璃态弹性（即柔性），因此会使模型稳定性下降，推荐温度为50-60度区间。</p>
+<p>平台的温度来源于平台下方内侧的加热块热源以及导热性好的铝基板导热，因此平台中心的实际加热温度会低于显示温度。在外部环境较冷的情况下，需要提高平台温度。</p>
+<p>以上则是表层质量以及温度的相关参数详解，理解其背后的原理及表现能够帮助我们更好地去调整。在下篇中将会对速度、支撑、平台粘附等进行解析。</p>
+<h2 id="三、速度"><a href="#三、速度" class="headerlink" title="三、速度"></a>三、速度</h2><ol>
+<li>打印速度<br>打印速度是所有喷头移动动作的速度，在切片软件中，当其他速度为0时默认遵循打印速度的设置，而当其他速度如填充速度进行了设置后，则会按照填充速度的设置来运行。</li>
+</ol>
+<p>基于方便用户可直接上手操作，JGcreat在安装后速度参数便已按照测试较好的设置。这也就意味着，如果只是单纯地调整打印速度，只会对总体的打印速度和打印时长产生较小影响，如果希望缩短打印时长，则需要对支撑、内外壁、填充、空走等速度进行调整。</p>
+<ol start="2">
+<li><p>填充速度<br>填充速度即打印填充时喷头移动的速度，须知填充不仅仅是网格线。如图，包括在壁层之间、曲面变化处的排线线条也是填充，因此填充速度设置过快时可能打印曲面打印效果变糟糕，建议控制在50以下。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189106"></p>
+</li>
+<li><p>内外壁-顶底速度<br>内外壁的打印速度和顶部顶部打印速度对模型表面成型效果有不小的影响。FDM打印是将线材挤压在完全冷却后的材料的上层，挤压后的线材数秒内便会冷却成型，而当移动速度过快时就会出现，喷头拖动挤出的耗材，因此会导致模型表面出现多孔疏松的瑕疵。</p>
+</li>
+<li><p>空走速度<br>当喷头未挤出耗材时移动时，即为空走。高速的空走会对模型打印效果产生影响的因素主要有2点：</p>
+</li>
+<li><p>空走时会拉扯出细丝——拉丝情况；</p>
+</li>
+<li><p>细丝假若挂在模型上或者横贯出模型外表面则会影响后续的打印，产生缝隙。</p>
+</li>
+</ol>
+<p>对于上述2点，是可以解决的，第一点可通过“回抽”设置来，第二点可通过设置中开启“梳理模式”来避免，极光尔沃切片软件是自动开启这个功能的，因此只需要根据打印的真实拉丝情况设置好回抽，便可把空走速度提高到100mm/s的较高水平。</p>
+<p>另外，由于喷头组件较重，因此惯性较大，当空走速度过高时，瞬时加速及减速很大，会产生很大的惯性，容易导致丢步，因此要么不要使用过高的空走速度，要么则开启加速控制，减少加速度。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189107"></p>
+<h2 id="四、支撑"><a href="#四、支撑" class="headerlink" title="四、支撑"></a>四、支撑</h2><p>支撑是大多数模型无法避免的但会对模型打印效果产生不良影响的因素，最直观地预先了解支撑影响范围就是看JG软件上模型底部的红色区域，据此来做调整。支撑设置合理与否是切片技巧高低的分水岭。</p>
+<ol>
+<li>支撑角度<br>支撑角度即指模型各区域和水平面夹角的角度，小于等于这个角度的区域都会产生支撑。角度并不是越大越好，虽然这样的确会较少支撑范围，但同样意味着模型打坏的风险会提高。支撑设置的合理区间为40°~70°，至于该如何设置较佳的角度，则需要看模型表面过渡平缓度。</li>
+</ol>
+<p>如表面过渡平缓，如球体，在40°甚至30°设置都可成功，过渡平缓意味哪怕是小角度的模型范围，它下方是有模型体积在做支撑的。大多数模型表面过渡大，如突出或凹陷的细节、结构，则需要设置更大的角度。可进一步地在切片后，在打印层视图模式下，逐层查看实时打印效果，如出现成型丝线悬空较多，则需要增加角度。</p>
+<p>如图中所示，由于层厚为0.3，层跨度大，因此更容易出现这种成型丝线悬空情况，此时则需要增加支撑角度，若不修改，此处会产生丝线脱出，除去后留有坑洞的瑕疵。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189108"><br>2. 支撑样式<br>极光尔沃切片软件中共有六种支撑样式，从实际使用效果来看，只有“折线”和“网格”较为实用。</p>
+<p>“线”支撑不够牢固，非常容易变形；“回环”、“三角形”支撑内部间隙较大，容易有支撑顶部及支撑处模型脱离的风险；“3D回环”有多方面的缺陷。</p>
+<p>“折线”和“网格”相比，前者间隙较大，但也意味着和模型接触少，对模型表面影响小，同时前者也更加容易拆除。由于JG软件的支撑会在接触模型前按照接触面形状变化，如下图，因此间隙问题实际上没多大影响。除了在模型表面十分多复杂结构外，一般情况推荐使用“折线”。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189109"><br>3. 支撑密度<br>支撑密度即支撑样式的密度。密度越小，支撑间的缝隙越大，支撑强度越低，也更容易拆取。一般20%密度以上的支撑就能获得足够的支撑强度，50%以上就完全不必要了。密度变大耗材使用也变多，那如何在低密度的情况下保证支撑表面能够完好打印出来呢？</p>
+<p>除了上面所讲的极光尔沃切片软件自带的支撑顶部随模型变化的功能外，还可以通过手动设置“支撑接触面”来在支撑顶部制造额外的样式，通过设置密度更高的“网格”支撑来保证模型表面效果。</p>
+<p>需要额外注意，当支撑很高时，低密度的“折线”会受喷头带动的力产生晃动，导致支撑处模型打散或者整个模型打废，因此在这类情况中，要么增加密度，要么则使用结构更加稳固的“网格”支撑。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189110"><br>（如图示，支撑接触面相当于把支撑顶部替换成可设置样式）<br>4. 支撑距离<br>如果支撑太难拆取，则需要设置2个参数：“支撑顶部的距离”、“支撑底部的距离”。这两个距离即支撑顶部与底部和模型之间的间隙，推荐设置范围是0.1-0.15。</p>
+<p>极光尔沃切片软件以及CURA软件的默认参数为0.1，可设置为0.12，支撑会更容易拆除，且对模型表面的效果影响较少。</p>
+<p>对于支撑接触模型表面要求较高的可设置至0.15，但是这个数值只适用于较为平缓的支撑接触区域，因为假设0.1mm层高的情况下，0.15已经足足产生了一层半的间隙，会使较小的模型细节下落导致细节处模型打散。<br>1<a target="_blank" rel="noopener" href="https://pan.imgbed.link/file/189111"></a><br>模型底部展示，0.12的支撑顶部距离下，黄框所示范围因受力较大，因此仍然会在模型上产生支撑痕迹，红框所示范围因受力较小，则基本看不到支撑痕迹。</p>
+<h2 id="五、平台粘附"><a href="#五、平台粘附" class="headerlink" title="五、平台粘附"></a>五、平台粘附</h2><ol>
+<li>粘附类型<br>粘附类型有3种，“外圈”其主要功能是把存在于喷头内部的耗材消耗点，避免因为内部残留的变脆、不同色的耗材影响模型效果。“檐边”、“底垫”则是为了扩大模型和平台的接触面积，降低模型脱离平台、过高模型顶部晃动的风险。</li>
+</ol>
+<p>此外“底垫”还可对调平效果做补偿，使模型能在底垫上以更水平的基底上打印，同时也避免了因为模型和打印平台直接接触，导致取模型时铲刀对模型的损失。</p>
+<p>不过由于JG软件在“底垫”功能上存在未修复bug，需要额外设置“底垫间隙”至0.12-0.18。<br>2. 檐边宽度、底垫外扩距离<br>喷头是把耗材挤压成型的，这意味着喷头会对已成型模型产生压力，尤其是对于竖直的较高且细的模型，顶部的模型容易被喷头的力带动，晃动情况下打印就会出现下图中的糟糕效果。</p>
+<p>对于这类情况，首先需要提高支撑密度或使用更牢固的支撑样式，其次，则需要增大模型和平台的接触面积，使模型“站”得更稳。使用“檐边”或“底垫”后，再分别增加“檐边宽度”或“底垫外扩距离”来增大和平台的接触面积。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pan.imgbed.link/file/189112"><br>切片是一门技术，但这个技术并不是令人望而生畏，需要的只是多用心多思考多疑问多探寻。希望认真看完文章的你，能够有所收获，能够体验到3D打印给工作生活带来的乐趣和便捷。</p>
+</div></article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src="https://pan.imgbed.link/file/185733" title="头像" alt="头像"><img class="post-copyright__author_img_front" src="https://pan.imgbed.link/file/185733" title="头像" alt="头像"></a><div class="post-copyright__author_name">tinnedfruit</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" target="_blank" rel="noopener" href="https://www.3dzyk.cn/thread-15416-1-1.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.3dzyk.cn/thread-15416-1-1.html')">3d打印切片技巧</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://pan.imgbed.link/file/185637" target="_blank"><img class="post-qr-code-img" src="https://pan.imgbed.link/file/185637" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pan.imgbed.link/file/185638" target="_blank"><img class="post-qr-code-img" src="https://pan.imgbed.link/file/185638" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.3dzyk.cn/thread-15416-1-1.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=3d打印切片技巧&amp;url=https://www.3dzyk.cn/thread-15416-1-1.html&amp;pic=https://pan.imgbed.link/file/185675" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://blog.tinnedfruit.top" target="_blank">画船听雨眠</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://pan.imgbed.link/file/185694" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/11/01/klipper/"><img class="prev-cover" src="https://pan.imgbed.link/file/189087" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">klipper系统源码</div></div></a></div><div class="next-post pull-right"><a href="/2024/11/02/3dModeling0/"><img class="next-cover" src="https://pan.imgbed.link/file/185681" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">3d建模技巧</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="https://pan.imgbed.link/file/185733" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"><div class="author-status"><img class="g-status" src="https://twikoo-magic.oss-cn-hangzhou.aliyuncs.com/baitian/file_6574887.webp" alt="status"></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">qwrt,pve,nas,3d打印</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">tinnedfruit</h1><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/tinnedfruit" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/593957554" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content"><div id="welcome-info"></div></div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/twopeople1.js"></script><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/zdog.dist.js"></script><script id="rendered-js" src="https://npm.wfqyys.cn/js/twoPeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.xpand canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="card-widget card-welcome"><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3d%E6%89%93%E5%8D%B0%E5%88%87%E7%89%87%E6%8A%80%E5%B7%A7"><span class="toc-text">3d打印切片技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF3D%E5%88%87%E7%89%87%E8%BD%AF%E4%BB%B6%EF%BC%9F%E5%AE%83%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">什么是3D切片软件？它能做什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3D%E6%89%93%E5%8D%B0%E4%B8%AD%E5%88%87%E7%89%87%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8F%82%E6%95%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90"><span class="toc-text">3D打印中切片常用的几个参数功能解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%A1%A8%E9%9D%A2%E8%B4%A8%E9%87%8F"><span class="toc-text">一、表面质量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%A9%E5%BA%A6"><span class="toc-text">温度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%80%9F%E5%BA%A6"><span class="toc-text">三、速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%94%AF%E6%92%91"><span class="toc-text">四、支撑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%B9%B3%E5%8F%B0%E7%B2%98%E9%99%84"><span class="toc-text">五、平台粘附</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/02/nas0/" title="黑群晖安装教程"><img src="https://pan.imgbed.link/file/185694" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑群晖安装教程"></a><div class="content"><a class="title" href="/2024/11/02/nas0/" title="黑群晖安装教程">黑群晖安装教程</a><time datetime="2024-11-02T14:45:24.553Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/02/nas2/" title="黑群晖添加应用拓展"><img src="https://pan.imgbed.link/file/185696" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑群晖添加应用拓展"></a><div class="content"><a class="title" href="/2024/11/02/nas2/" title="黑群晖添加应用拓展">黑群晖添加应用拓展</a><time datetime="2024-11-02T14:45:24.553Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/02/nas1/" title="黑群晖洗半白教程"><img src="https://pan.imgbed.link/file/185695" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑群晖洗半白教程"></a><div class="content"><a class="title" href="/2024/11/02/nas1/" title="黑群晖洗半白教程">黑群晖洗半白教程</a><time datetime="2024-11-02T14:45:24.553Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/02/voron2.4peijian/" title="voron2.4组装配件指南"><img src="https://pan.imgbed.link/file/185636" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="voron2.4组装配件指南"></a><div class="content"><a class="title" href="/2024/11/02/voron2.4peijian/" title="voron2.4组装配件指南">voron2.4组装配件指南</a><time datetime="2024-11-02T14:45:24.553Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/02/voron2.4wendang/" title="voron2.4文档"><img src="https://pan.imgbed.link/file/185635" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="voron2.4文档"></a><div class="content"><a class="title" href="/2024/11/02/voron2.4wendang/" title="voron2.4文档">voron2.4文档</a><time datetime="2024-11-02T14:45:24.553Z" title="发表于 2024-11-02 22:45:24">2024-11-02</time></div></div></div></div></div></div></div></main><footer id="footer" style="https://pan.imgbed.link/file/185675"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"><div id="runtimeTextTip"></div></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" target="_blank" rel="noopener" href="https://docs.anheyu.com/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="更新日志" href="/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"></a><a class="github-badge" target="_blank" href="https://www.upyun.com/" style="margin-inline:5px" data-title="本站使用又拍云为静态资源提供CDN加速" title="本站使用又拍云为静态资源提供CDN加速"><img src="https://pan.imgbed.link/file/189418" alt="本站使用又拍云为静态资源提供CDN加速"></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">©2024 By <a class="footer-bar-link" href="/" title="tinnedfruit" target="_blank">tinnedfruit</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="粤ICP备2024313835号">粤ICP备2024313835号</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.tinnedfruit.top/" title="罆頭的博客"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="罆頭的博客"><span class="back-menu-item-text">罆頭的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/charts/"><i class="anzhiyufont anzhiyu-icon-chart-line faa-tada" style="font-size: 0.9em;"></i><span> 文章统计</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-instagram faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/games/"><i class="anzhiyufont anzhiyu-icon-rocket faa-tada" style="font-size: 0.9em;"></i><span> 游戏世界</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 想做的事</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/PVE/" style="font-size: 0.88rem;">PVE<sup>3</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 0.88rem;">Tag Plugins<sup>1</sup></a><a href="/tags/klipper/" style="font-size: 0.88rem;">klipper<sup>1</sup></a><a href="/tags/voron/" style="font-size: 0.88rem;">voron<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9/" style="font-size: 0.88rem;">主题魔改<sup>3</sup></a></div></div><hr></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="anzhiyufont anzhiyu-icon-comment-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async="" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("2024/10/15 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 tinnedfruit 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async="" src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("2024/10/15 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async="" data-pjax="" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script async="" data-pjax="" src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script defer="true" src="/js/welcome.js"></script><script type="text/javascript" src="https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js"></script><link rel="stylesheet" href="/custom/fps/fps.css" media="defer" onload="this.media='all'"><script src="/custom/fps/fps.js"></script><span id="fps"></span><script defer="" type="text/javascript" src="/custom/dayalert/sweetalert2.all.js"></script><script defer="" src="/custom/dayalert/lunar.js"></script><script defer="" src="/custom/dayalert/day.js"></script><script async="" data-pjax="" src="/js/imgloaded.js?1"></script><script src="/js/footer-animal.js" defer=""></script><script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script><script>(() => {
+  const isChatBtn = true
+  const isChatHideShow = true
+
+  if (isChatBtn) {
+    const close = () => {
+      Chatra('minimizeWidget')
+      Chatra('hide')
+    }
+
+    const open = () => {
+      Chatra('openChat', true)
+      Chatra('show')
+    }
+
+    window.ChatraSetup = {
+      startHidden: true
+    }
+  
+    window.chatBtnFn = () => {
+      const isShow = document.getElementById('chatra').classList.contains('chatra--expanded')
+      isShow ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        Chatra('hide')
+      },
+      show: () => {
+        Chatra('show')
+      }
+    }
+  }
+
+  (function(d, w, c) {
+    w.ChatraID = 'iST2hTntGAfwEQrEf'
+    var s = d.createElement('script')
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments)
+    }
+    s.async = true
+    s.src = 'https://call.chatra.io/chatra.js'
+    if (d.head) d.head.appendChild(s)
+  })(document, window, 'Chatra')
+
+})()</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-548WJ90VZV', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div>
+    <link rel="stylesheet" href="https://ai.tianli0.top/static/public/postChatUser_summary.min.css">
+    <script>
+        let tianliGPT_key = 'b229278e24060b4dd55341b7bd36195cd13289';
+        let tianliGPT_postSelector = '#postchat_postcontent';
+        let tianliGPT_Title = '文章摘要';
+        let tianliGPT_postURL = '/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/';
+        let tianliGPT_blacklist = '';
+        let tianliGPT_wordLimit = '1000';
+        let tianliGPT_typingAnimate = true;
+        var postChatConfig = {
+          backgroundColor: "#3e86f6",
+          bottom: "67px",
+          left: "16px",
+          fill: "#FFFFFF",
+          width: "44px",
+          frameWidth: "375px",
+          frameHeight: "600px",
+          defaultInput: true,
+          upLoadWeb: true,
+          showInviteLink: true,
+          userTitle: "PostChat",
+          userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～",
+          addButton: true,
+          beginningText: "这篇文章介绍了"
+        };
+    </script>
+    <script data-postchat_key="b229278e24060b4dd55341b7bd36195cd13289" src="https://ai.tianli0.top/static/public/postChatUser_summary.min.js"></script>
+  </body></html>
