@@ -60,7 +60,7 @@
   const ldconfig = {
     light: {
 	  smallSrc: 'https://pan.imgbed.link/file/186737', //浅色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: 'https://pan.imgbed.link/file/186741', //浅色模式 大图链接 最终显示的图片
+	  largeSrc: 'https://pan.imgbed.link/file/189863', //浅色模式 大图链接 最终显示的图片
 	  mobileSmallSrc: 'https://pan.imgbed.link/file/186739', //手机端浅色小图链接 尽可能配置小于100k的图片
 	  mobileLargeSrc: 'https://pan.imgbed.link/file/186740', //手机端浅色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
