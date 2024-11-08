@@ -60,16 +60,16 @@
   const ldconfig = {
     light: {
 	  smallSrc: 'https://pan.imgbed.link/file/186737', //浅色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: '/img/92906953_p0_master1200.jpg', //浅色模式 大图链接 最终显示的图片
+	  largeSrc: 'https://pan.imgbed.link/file/189863', //浅色模式 大图链接 最终显示的图片
 	  mobileSmallSrc: 'https://pan.imgbed.link/file/186739', //手机端浅色小图链接 尽可能配置小于100k的图片
-	  mobileLargeSrc: '/img/88131184_p0_master1200.jpg', //手机端浅色大图链接 最终显示的图片
+	  mobileLargeSrc: 'https://pan.imgbed.link/file/186740', //手机端浅色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
 	  },
 	dark: {
 	  smallSrc: 'https://pan.imgbed.link/file/186737', //深色模式 小图链接 尽可能配置小于100k的图片 
-	  largeSrc: '/img/92906953_p0_master1200(1).png', //深色模式 大图链接 最终显示的图片
+	  largeSrc: 'https://pan.imgbed.link/file/189090', //深色模式 大图链接 最终显示的图片
 	  mobileSmallSrc: 'https://pan.imgbed.link/file/186739', //手机端深色模式小图链接 尽可能配置小于100k的图片
-	  mobileLargeSrc: '/img/88131184_p0_master1200.jpg', //手机端深色大图链接 最终显示的图片
+	  mobileLargeSrc: 'https://pan.imgbed.link/file/186740', //手机端深色大图链接 最终显示的图片
 	  enableRoutes: ['/'],
 	  },
 	};
